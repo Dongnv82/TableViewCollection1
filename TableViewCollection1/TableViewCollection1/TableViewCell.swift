@@ -19,7 +19,9 @@ class TableViewCell: UITableViewCell {
     }
     // de khac phuc tinh trang cell boi xanh bi lap di lap lai can goi ham:
     override func prepareForReuse() {
-        contentView.backgroundColor = UIColor.white
+        textLabel?.text = nil
+        detailTextLabel?.text = ""
+        backgroundColor = UIColor.white
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

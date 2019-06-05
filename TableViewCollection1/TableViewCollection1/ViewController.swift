@@ -38,6 +38,7 @@ class ViewController: UIViewController{
         }
     }
     
+    
     // truyen du lieu can sua sang man 2
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let inputEdit = segue.destination as? ViewController1
@@ -89,7 +90,10 @@ class NumberDataSource: NSObject,UITableViewDataSource{
         // cell?.textLabel?.text = String(array[indexPath.row])
         // neu number chia het cho 10 thi boi xanh cell
         if indexPath.row % 10 == 0{
+            //boi xanh background cua contenview
             cell.contentView.backgroundColor = UIColor.blue
+            //boi xam background cua textlable
+            cell.textLabel?.backgroundColor = UIColor.gray
         }
         return cell
     }
